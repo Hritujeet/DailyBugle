@@ -16,7 +16,7 @@ const getHeadlines = (api)=>{
         const obj = JSON.parse(xhr.responseText);
         const articles = obj.articles;
         let newsHtml = "";
-        articles.forEach(newsItem => {
+        Array.from(articles).forEach(newsItem => {
             let news = `<div class="card bg-indigo-100 px-5 py-3 rounded-md shadow-lg flex space-x-4" id="newsCard">
             <img class="w-auto h-32 rounded-md" src="${newsItem.urlToImage}" alt="" srcset="">
             <div class="content">
