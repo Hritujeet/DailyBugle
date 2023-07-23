@@ -15,6 +15,7 @@ const getHeadlines = (api)=>{
     xhr.onload = ()=>{
         const obj = JSON.parse(xhr.responseText);
         const articles = obj.articles;
+        console.log(articles);
         let newsHtml = "";
         Array.from(articles).forEach(newsItem => {
             let news = `<div class="card bg-indigo-100 px-5 py-3 rounded-md shadow-lg flex space-x-4" id="newsCard">
